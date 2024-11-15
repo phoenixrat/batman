@@ -148,7 +148,9 @@ body {
 
     gap: 20px;
 
-    padding-bottom: 80px;
+    padding-bottom: 100px;
+
+    margin-bottom: 70px;
 
 }
 
@@ -212,7 +214,7 @@ body {
 
 .chat-input {
 
-    padding: 20px;
+    padding: 15px 20px;
 
     display: flex;
 
@@ -235,6 +237,8 @@ body {
     margin: 0 auto;
 
     box-sizing: border-box;
+
+    z-index: 1000;
 
 }
 
