@@ -100,12 +100,19 @@ async function handleUserMessage() {
     userInput.disabled = true;
     sendButton.disabled = true;
 
+    // Blur input to prevent keyboard from popping up again on mobile
+    userInput.blur();
+
     const response = await sendMessage(message);
     addMessage(response);
 
     userInput.disabled = false;
     sendButton.disabled = false;
-    userInput.focus();
+    
+    // Remove the automatic focus for mobile
+    if (!window.matchMedia('(max-width: 768px)').matches) {
+        userInput.focus();
+    }
 }
 
 sendButton.addEventListener('click', handleUserMessage);
